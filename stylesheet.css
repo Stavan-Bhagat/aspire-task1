@@ -8,12 +8,14 @@
   width: 100vw;
   z-index: 2;
 }
-.navbar-nav{
+
+.navbar-nav {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
-.navbar-brand:hover{
-color: #f13a11;
+
+.navbar-brand:hover {
+  color: #f13a11;
 }
 .nav-link {
   color: white;
@@ -40,7 +42,6 @@ color: #f13a11;
 }
 
 /* section1 background*/
-
 h1 {
   font-weight: bolder;
   color: #ffffff;
@@ -132,6 +133,10 @@ h1 {
 
   .padding {
     padding-top: 5%;
+  }
+  navbar-toggler-icon{
+    
+    content: "\f067";
   }
 }
 
