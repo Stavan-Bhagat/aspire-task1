@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+.navbar-nav{
+  display: flex;
+  justify-content:space-evenly;
+}
+.navbar-brand:hover{
+color: #f13a11;
+}
+.nav-link {
+  color: white;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.nav-link:hover {
+  color: red;
+}
+
+#section {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: 50rem;
+  overflow-x: auto;
+}
+
+.btn:hover {
+  border-color: beige;
+}
+
+.fodrm-label {
+  color: #ffffff;
+}
+
+/* section1 background*/
+
+h1 {
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+#section1bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/gym.jpg");
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+
+.get_started {
+  background: none;
+  color: #ffffff;
+  border: none;
+}
+
+.get_started:hover {
+  color: #f13a11;
+}
+
+.learn_more {
+  color: #f13a11;
+  border-color: #f13a11;
+  background: none;
+}
+
+.learn_more:hover {
+  background-color: #ffffff;
+}
+
+#membership {
+  color: #ffffff;
+  background-color: #f13a11;
+  border: #f13a11;
+  padding: 1%;
+  width: 100%;
+}
+
+#membership:hover {
+  background-color: #ffffff;
+  color: #f13a11;
+}
+
+#left_container {
+  padding-left: 15%;
+  padding-right: 5%;
+  width: 75%;
+  float: right;
+}
+
+#right_container {
+  border-left: 1px solid rgb(80, 80, 80);
+  padding-left: 15%;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#sec3div {
+  padding: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  #right_container {
+    border: none;
+    padding: 0%;
+  }
+
+  #left_container {
+    padding: 0%;
+    float: left;
+  }
+
+  #sec3div {
+    float: left;
+    padding: 5% 2%;
+  }
+
+  .padding {
+    padding-top: 5%;
+  }
+}
+
+.p {
+  color: #666262;
+  margin: 0%;
+}
+
+/* section3 */
+h5 {
+  font-weight: bolder;
+}
+
+.A {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  color: rgb(15, 15, 15);
+}
+
+/* section 4 */
+.section {
+  padding: 5%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 100%;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+.price {
+  background-color: #f13a11;
+}
+
+/* section 5 */
+tr {
+  border: 1px solid #474748;
+}
+
+td {
+  border: 1px solid #474748;
+}
+
+/* section 6 query and contact*/
+
+input {
+  width: 100%;
+}
+
+.sendmsg {
+  background-color: gray;
+  width: 100%;
+}
+
+.sendmsg:hover {
+  background-color: #f13a11;
+}
