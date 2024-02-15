@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+section {
+  overflow: hidden;
+}
 .navbar {
   position: fixed;
   width: 100vw;
@@ -25,6 +27,13 @@
 .nav-link:hover {
   color: red;
 }
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("images/hamburger.png");
+}
+
+.collapse .navbar-toggler .navbar-toggler-icon {
+  background-image: url("images/close.png");
+}
 
 #section {
   padding-top: 5%;
@@ -40,6 +49,34 @@
 .fodrm-label {
   color: #ffffff;
 }
+/* floating */
+.floatup {
+  animation: floatUp 2s ease-in-out;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+/* 
+.fadeInB0ottom { animation-name: fadeInBo0ttom ;
+
+}
+@keyframes fadeInB0ottom {
+    from {
+        opacity: 0;
+        transform: translateY(300%);
+    }
+    to { opacity: 1 ;
+      transform: translateY(-300%);
+    }
+} */
 
 /* section1 background*/
 h1 {
@@ -134,8 +171,7 @@ h1 {
   .padding {
     padding-top: 5%;
   }
-  navbar-toggler-icon{
-    
+  navbar-toggler-icon {
     content: "\f067";
   }
 }
