@@ -31,7 +31,11 @@
     <div class="container" style="width: 30%; height: 100vh">
       <h2 class="text-light pb-3 mt-5">
         SIGNUP <i class="fa-solid fa-person-running"></i>
-        <span id="successMessage" style="color: green;text-shadow:1px 1px 1px white;display:none">SUCCESSFUL</span>
+        <span
+          id="successMessage"
+          style="color: green; text-shadow: 1px 1px 1px white; display: none"
+          >SUCCESSFUL</span
+        >
       </h2>
 
       <form class="row g-3 shadow-sm p-3 bg-body rounded bg-light" id="myForm">
@@ -62,7 +66,7 @@
             id="city"
             name="city"
             placeholder="city"
-          /><span id="scity" class=" error  text-danger"></span>
+          /><span id="scity" class="error text-danger"></span>
         </div>
         <div class="col-md-12">
           <input
@@ -70,9 +74,8 @@
             class="form-control"
             id="password"
             name="password"
-        
             placeholder="password"
-          /><span class="error  text-danger" id="spassword"></span>
+          /><span class="error text-danger" id="spassword"></span>
         </div>
         <div class="col-md-12">
           <input
@@ -88,7 +91,16 @@
           <button type="submit" class="btn btn-primary">Sign Up</button>
         </div>
         <div class="col-6">
-          <button type="button" class="btn btn-success " id="signinbtn" style="display: none;" ><a href="index.html" class="text-white text-decoration-none">Sign In</a></button>
+          <button
+            type="button"
+            class="btn btn-success"
+            id="signinbtn"
+            style="display: none"
+          >
+            <a href="index.html" class="text-white text-decoration-none"
+              >Sign In</a
+            >
+          </button>
         </div>
       </form>
       <div id="response" class="text-light mt-2"></div>
