@@ -10,12 +10,10 @@ section {
   width: 100vw;
   z-index: 2;
 }
-
 .navbar-nav {
   display: flex;
   justify-content: space-evenly;
 }
-
 .navbar-brand:hover {
   color: #f13a11;
 }
@@ -30,25 +28,22 @@ section {
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("images/hamburger.png");
 }
-
 .collapse .navbar-toggler .navbar-toggler-icon {
   background-image: url("images/close.png");
 }
-
 #section {
   padding-top: 5%;
   padding-bottom: 5%;
   height: 50rem;
   overflow-x: auto;
 }
-
 .btn:hover {
   border-color: beige;
 }
-
 .fodrm-label {
   color: #ffffff;
 }
+
 /* floating */
 .floatup {
   animation: floatUp 2s ease-in-out;
@@ -70,7 +65,6 @@ h1 {
   font-weight: bolder;
   color: #ffffff;
 }
-
 #section1bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("images/gym.jpg");
@@ -85,27 +79,22 @@ h1 {
   background-position: center;
   padding: 0;
 }
-
 .btn-getStarted {
   background: none;
   color: #ffffff;
   border: none;
 }
-
 .btn-getStarted:hover {
   color: #f13a11;
 }
-
 .btn-learnMore {
   color: #f13a11;
   border-color: #f13a11;
   background: none;
 }
-
 .btn-learnMore:hover {
   background-color: #ffffff;
 }
-
 #membership {
   color: #ffffff;
   background-color: #f13a11;
@@ -113,7 +102,6 @@ h1 {
   padding: 1%;
   width: 100%;
 }
-
 #membership:hover {
   background-color: #ffffff;
   color: #f13a11;
@@ -169,7 +157,6 @@ h1 {
     content: "\f067";
   }
 }
-
 .p {
   color: #666262;
   margin: 0%;
@@ -182,7 +169,6 @@ h1 {
 h5 {
   font-weight: bolder;
 }
-
 .A {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: normal;
@@ -203,11 +189,9 @@ h5 {
 .card {
   height: 100%;
 }
-
 h2 {
   font-weight: bolder;
 }
-
 .price {
   background-color: #f13a11;
 }
@@ -224,11 +208,9 @@ thead tr {
   background-color: #f13a11;
   border: black;
 }
-
 tr {
   border: 1px solid #474748;
 }
-
 td {
   border: 1px solid #474748;
 }
@@ -248,7 +230,6 @@ input {
   background-color: #171819;
   padding: 2%;
 }
-
 .sendmsg:hover {
   background-color: #f13a11;
 }

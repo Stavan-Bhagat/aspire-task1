@@ -33,7 +33,7 @@
     <!-- axios cdn -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet2.css" />
     <script defer src="js_files/signin.js"></script>
   </head>
   <body class="bg-light">
@@ -109,15 +109,14 @@
       </div>
     </nav>
 
-    <div
-      class="container align-center"
-      style="width: 27%; padding-top: 10%; height: auto"
-    >
-      <div class="shadow-sm p-3 mb-3 bg-white rounded text-secondary-emphasis">
+    <div class="container d-flex align-items-center justify-content-center" >
+      <div
+        class="innerDiv shadow-sm py-4 px-4 my-5 bg-white rounded text-secondary-emphasis"
+      >
         <h2 class="text-dark pb-3">
           SIGNIN <i class="fa-solid fa-dumbbell"></i>
         </h2>
-        <form class="row g-3" style="height: 50vh" id="signIn">
+        <form class="row g-3" style="height: 40vh" id="signIn">
           <div class="col-md-12">
             <input
               type="email"
@@ -135,6 +134,7 @@
               id="password"
               placeholder="password"
             />
+            <div id="errormsg" class="text-danger"></div>
           </div>
           <div class="col-12">
             <button type="submit" class="btn btn-primary" id="submit">
@@ -148,8 +148,6 @@
           </p>
         </form>
       </div>
-
-      <div id="errormsg" class="text-danger"></div>
     </div>
   </body>
 </html>

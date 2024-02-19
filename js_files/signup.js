@@ -1,39 +1,44 @@
 // Event listener for form submission
-const form=document.getElementById('myForm');
-form.addEventListener("submit",function(event){
+const form = document.getElementById("myForm");
+form.addEventListener("submit", function (event) {
   event.preventDefault();
-if(validateInputs()){
+  if (validateInputs()) {
+    const formData = new FormData(event.target);
+    const userdata = Object.fromEntries(formData.entries());
 
-  const formData = new FormData(event.target);
-  const userdata = Object.fromEntries(formData.entries());
+    axios
+      .get("http://localhost:3000/users")
+      .then((response) => {
+        const existingUsers = response.data;
 
-  axios.get('http://localhost:3000/users')
-    .then(response => {
-      const existingUsers = response.data;
-    
-      const emailExists = existingUsers.some(user => user.email === userdata.email);
-      if (emailExists) {
-        document.getElementById('response').textContent = 'Email already in use. Please use a different email address.';
-      } else {
-        axios.post('http://localhost:3000/users', userdata)
-          .then(response => {
-            document.getElementById('successMessage').style.display = 'block';
-            document.getElementById('signinbtn').style.display = 'block';
-            
-            event.target.reset();
-            // window.location.href = "index.html";
-          
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('response').textContent = 'An error occurred. Please try again later.';
-          });
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      document.getElementById('response').textContent = 'An error occurred while retrieving user data.';
-    });
+        const emailExists = existingUsers.some(
+          (user) => user.email === userdata.email
+        );
+        if (emailExists) {
+          document.getElementById("response").textContent =
+            "Email already in use. Please use a different email address.";
+        } else {
+          axios
+            .post("http://localhost:3000/users", userdata)
+            .then((response) => {
+              document.getElementById("successMessage").style.display = "block";
+              document.getElementById("signinbtn").style.display = "block";
+
+              event.target.reset();
+              // window.location.href = "index.html";
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.getElementById("response").textContent =
+                "An error occurred. Please try again later.";
+            });
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        document.getElementById("response").textContent =
+          "An error occurred while retrieving user data.";
+      });
   }
 });
 
@@ -43,7 +48,9 @@ function validateInputs() {
   const email = document.getElementById("email").value.trim();
   const city = document.getElementById("city").value.trim();
   const password = document.getElementById("password").value.trim();
-  const confirmPassword = document.getElementById("confirmpassword").value.trim();
+  const confirmPassword = document
+    .getElementById("confirmpassword")
+    .value.trim();
   let isValid = true;
 
   if (name === "") {
@@ -74,17 +81,20 @@ function validateInputs() {
     document.getElementById("spassword").innerHTML = "Shouldn't be empty";
     isValid = false;
   } else if (password.length < 8) {
-    document.getElementById("spassword").innerHTML = "Should be at least 8 characters";
+    document.getElementById("spassword").innerHTML =
+      "Should be at least 8 characters";
     isValid = false;
   } else {
     document.getElementById("spassword").innerHTML = "";
   }
 
   if (confirmPassword === "") {
-    document.getElementById("sconfirmpassword").innerHTML = "Shouldn't be empty";
+    document.getElementById("sconfirmpassword").innerHTML =
+      "Shouldn't be empty";
     isValid = false;
   } else if (password !== confirmPassword) {
-    document.getElementById("sconfirmpassword").innerHTML = "Passwords don't match";
+    document.getElementById("sconfirmpassword").innerHTML =
+      "Passwords don't match";
     isValid = false;
   } else {
     document.getElementById("sconfirmpassword").innerHTML = "";
@@ -92,7 +102,6 @@ function validateInputs() {
 
   return isValid;
 }
-
 
 // function validateInputs(){
 // const regex = /\d/;
@@ -102,7 +111,6 @@ function validateInputs() {
 //  const cityInput = document.getElementById("city");
 //  const passwordInput = document.getElementById("password");
 //  const confirmPasswordInput = document.getElementById("confirmpassword");
-
 
 // // Event listener for name input
 // nameInput.addEventListener('input', function() {
@@ -171,19 +179,6 @@ function validateInputs() {
 //   });
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // form.addEventListener("submit",event=>{
 //   event.preventDefault();
 //   validateInputs();
@@ -228,7 +223,7 @@ function validateInputs() {
 
 //    // Regular expression for checking digits
 //    const regex = /\d/;
- 
+
 //   // Event listener for name input
 //   nameInput.addEventListener('input', function() {
 //     const name = nameInput.value.trim();
@@ -295,4 +290,3 @@ function validateInputs() {
 //       element.textContent = '';
 //   });
 // }
-
