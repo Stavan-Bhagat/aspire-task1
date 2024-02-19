@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>signIn</title>
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -32,8 +32,9 @@
     />
     <!-- axios cdn -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <!-- stylesheet -->
     <link rel="stylesheet" href="stylesheet2.css" />
+    <!-- js -->
     <script defer src="js_files/signin.js"></script>
   </head>
   <body class="bg-light">
@@ -109,18 +110,18 @@
       </div>
     </nav>
 
-    <div class="container d-flex align-items-center justify-content-center" >
+    <div class="container d-flex align-items-center justify-content-center">
       <div
         class="innerDiv shadow-sm py-4 px-4 my-5 bg-white rounded text-secondary-emphasis"
       >
         <h2 class="text-dark pb-3">
-          SIGNIN <i class="fa-solid fa-dumbbell"></i>
+          SIGN IN <i class="fa-solid fa-dumbbell float-end "></i>
         </h2>
         <form class="row g-3" style="height: 40vh" id="signIn">
           <div class="col-md-12">
             <input
               type="email"
-              class="form-control"
+              class="form-control rounded-0"
               name="name"
               id="email"
               placeholder="email"
@@ -129,7 +130,7 @@
           <div class="col-md-12">
             <input
               type="password"
-              class="form-control"
+              class="form-control rounded-0"
               name="password"
               id="password"
               placeholder="password"
@@ -137,7 +138,7 @@
             <div id="errormsg" class="text-danger"></div>
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-primary" id="submit">
+            <button type="submit" class="btn btn-primary rounded-0" id="submit">
               Submit
             </button>
           </div>
